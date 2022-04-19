@@ -8,11 +8,11 @@ const file = path.join(filePath, 'products.json')
 let db; 
 
 // para correr correctamente se tuvo que modificar el package.json para ignorar el archivo puesto 
-// generaba un bucle infinito
+// generaba un bucle infinito, ya que buscaba cambios constantentes en ese archivo
 const createConnection = async () =>{
     db = new Low(new JSONFile(file))
     await db.read()
-    db.data ||= { posts: [] }
+    db.data ||= { product: [] }
     await db.write();
 };
 
