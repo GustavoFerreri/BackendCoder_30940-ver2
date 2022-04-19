@@ -2,13 +2,13 @@
 
 const { Router } = require ('express');
 const router = Router();
-const { getAll, getById, createProduct } = require ('../controllers/tasks.controller')
+const { getAll, getById, createProduct, updateProduct } = require ('../controllers/tasks.controller')
 
 router.get('/product', getAll)
 router.get('/productRandom', )
 router.get('/product/:id', getById)
 router.post('/product', createProduct)
-router.put('/product/:id', )
+router.put('/product/:id', updateProduct)
 router.delete('/product/:id', )
 
 module.exports = router;
