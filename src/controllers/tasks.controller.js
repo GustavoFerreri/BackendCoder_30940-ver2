@@ -47,9 +47,18 @@ const updateProduct = async (req, res) => {
     res.json(prodRes)
 }
 
+const deleteProduct = async (req, res) => {
+    const db = getConnection();
+    const newProduct = db.data.product.filter(prod =>prod.id !== req.params.id);
+    db.data.product = newProduct;
+    await db.write();
+    return res.json(newProduct);
+};
+
 module.exports = {
     getAll,
     getById,
     updateProduct,
-    createProduct
+    createProduct,
+    deleteProduct
 }
