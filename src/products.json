@@ -6,6 +6,13 @@
       "price": "125",
       "img": "img",
       "description": "Pelicula fantastica"
+    },
+    {
+      "id": "67fcdf87-9a2e-47da-a449-d33f55497bfe",
+      "title": "Spiderman",
+      "price": "135",
+      "img": "img",
+      "description": "Pelicula heroe"
     }
   ]
 }

@@ -32,11 +32,19 @@ const createProduct = async (req, res) => {
     res.send(req.body)
 }
 
-const updateProduct = async (req, body) => {
-    const result = await getConnection().get('product').find({id: req.params.id})
-        .assign(req, body)
-        .write();
-    res.json(result)
+const updateProduct = async (req, res) => {
+    const { title, price, img, description } = req.body;
+    const db = getConnection();
+    const prodRes = await db.data.product.find(prod=>prod.id === req.params.id);
+    prodRes.title = title;
+    prodRes.price = price;
+    prodRes.img = img;
+    prodRes.description = description;
+    db.data.product.map(prod=>(prod.id === req.params.id ? prodRes : prod));
+    console.log(prodRes)
+    console.log(req.body)
+    await db.write();
+    res.json(prodRes)
 }
 
 module.exports = {

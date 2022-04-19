@@ -27,7 +27,14 @@ Ademas del material de clases, y de los videos de clases, se utilizo:
 > _Para crear un producto_
 > ```post /product```
 > _Para actualizar un registro_
-> ```put /product/:id```
+> ```put /product/:id
+{
+    "title": "Spiderman",
+    "price": "135",
+    "img": "img",
+    "description": "Pelicula heroe"
+}
+```
 > _Para eliminar un registro_
 > ```delete /product/:id```
 
