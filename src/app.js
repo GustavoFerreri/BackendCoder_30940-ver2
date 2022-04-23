@@ -2,6 +2,8 @@
 
 const express = require('express');
 const morgan = require('morgan');
+const path = require('path')
+const { engine } = require('express-handlebars');
 
 const app = express();
 
@@ -13,6 +15,13 @@ app.use(express.json());
 app.use('/api', require('../src/routes/tasks.routes'));
 
 // Template
-
+app.set('view engine', 'hbs')
+app.set('views', path.join(__dirname, './views'))
+app.engine('hbs', 
+    engine({
+    extname: '.hbs',
+    defaultLayout: 'main.hbs',
+    partialDir: __dirname + 'views/partials'
+}))
 
 module.exports = app;

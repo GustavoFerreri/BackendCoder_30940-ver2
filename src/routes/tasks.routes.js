@@ -4,6 +4,8 @@ const { Router } = require ('express');
 const router = Router();
 const { getAll, getById, createProduct, updateProduct, deleteProduct } = require ('../controllers/tasks.controller')
 
+router.get('/', (req, res)=>{
+    res.render('index')})
 router.get('/product', getAll)
 router.get('/product/:id', getById)
 router.post('/product', createProduct)
