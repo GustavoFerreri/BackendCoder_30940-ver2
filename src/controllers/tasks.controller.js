@@ -7,18 +7,17 @@ const { v4 } = require ('uuid')
 
 const getAll = (req, res) => {
     const products = getConnection().data.product;
-    res.json(products)
+    res.render('product', {products: products})
 }
 
 const getById = (req, res) =>{
     const product = getConnection().data.product;
     console.log(product.filter(prod => prod.id === req.params.id))
-    res.json(product.filter(prod => prod.id === req.params.id))
+    res.render('product', {products: product.filter(prod => prod.id === req.params.id)})
 }
 
-// Mantenemos el count para inicio de contador segun objetivo
-// let count = 1
 const createProduct = async (req, res) => {
+    console.log(req.body)
     const newProduct ={
         id: v4(),
         title: req.body.title,

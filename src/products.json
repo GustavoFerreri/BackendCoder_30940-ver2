@@ -6,6 +6,20 @@
       "price": "125",
       "img": "img",
       "description": "Pelicula fantastica"
+    },
+    {
+      "id": "d90e851d-0cd8-4e79-bbcc-f72430dcf7d6",
+      "title": "Spiderman",
+      "price": "115",
+      "img": "https://i0.wp.com/hipertextual.com/wp-content/uploads/2021/08/spider-man1.jpg?fit=1920%2C1080&ssl=1",
+      "description": "Primera película del arácnido"
+    },
+    {
+      "id": "9e1e3ea7-2c73-426c-997a-da4371a758cb",
+      "title": "Spiderman 2",
+      "price": "125",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Spiderman.JPG/1200px-Spiderman.JPG",
+      "description": "Segunda película del arácnido"
     }
   ]
 }
