@@ -10,7 +10,7 @@ router.get('/', (req, res)=>{
 router.get('/product/', getAll)
 router.get('/product/:id', getById)
 router.get('/productCreate', (req, res)=>{
-    res.render('chargeProduct')
+    res.render('products/chargeProduct')
 })
 router.post('/product', createProduct)
 router.put('/product/:id', updateProduct)

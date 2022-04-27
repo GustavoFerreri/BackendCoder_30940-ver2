@@ -22,7 +22,8 @@ app.engine('hbs',
     engine({
     extname: '.hbs',
     defaultLayout: 'main.hbs',
-    partialDir: __dirname + 'views/hbs/partials'
+    layoutsDir: path.join(app.get("views"), "layouts"),
+    partialsDir: path.join(app.get("views"), "partials"),
 }))
 
 module.exports = app;
