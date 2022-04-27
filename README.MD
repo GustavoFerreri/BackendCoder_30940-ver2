@@ -34,9 +34,9 @@ Ademas del material de clases, y de los videos de clases, se utilizo:
     "img": "img",
     "description": "Pelicula heroe"
 }
-```
+
 > _Para eliminar un registro_
-> ```delete /product/:id```
+> delete /product/:id
 
 ### Formato de Json para carga en postman
 
@@ -54,6 +54,5 @@ Por otro lado el contenido esta dentro del framework de Bootstrap, en este caso 
 Para acceder al mismo basta con entrar a la raiz del server
 
 ####
-```sh
+sh
 https://localhost:8080/api/
-```
