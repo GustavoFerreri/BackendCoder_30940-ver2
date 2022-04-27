@@ -47,9 +47,13 @@ Ademas del material de clases, y de los videos de clases, se utilizo:
     "description": "Pelicula fantastica"
 }
 
+### Motor de plantilla
+Aplicamos EJS, Handlebars, y Pug, si bien los tres los probe uno me parece similar a python, otro a php, pero con el que mejor me siento es con _handlebars_, al menos con lo que ha aplicando hasta el momento.
+Dicho esto se agrega la navegacion entre las dos web que hasta el momento utilizamos.
+Por otro lado el contenido esta dentro del framework de Bootstrap, en este caso importado mediante cdn.
+Para acceder al mismo basta con entrar a la raiz del server
+
 ####
 ```sh
 https://localhost:8080/api/
 ```
-
-### Motor de plantilla
