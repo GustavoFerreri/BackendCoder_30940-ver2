@@ -1,11 +1,15 @@
 'use strict'
 
+// Declaramos express
 const express = require('express');
-const morgan = require('morgan');
-const path = require('path')
-const { engine } = require('express-handlebars');
-
 const app = express();
+
+// Declaramos midleware
+const morgan = require('morgan');
+const path = require('path');
+
+// Declaramos handlebars
+const { engine } = require('express-handlebars');
 
 // Middlewares
 app.use(morgan('dev'));
@@ -15,9 +19,11 @@ app.use(express.urlencoded({extended: false}))
 // Routes
 app.use('/api', require('../src/routes/tasks.routes'));
 
+app.use(express.static(path.join(__dirname, 'src')));
+
 // Template
-app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, './views/hbs'))
+app.set('view engine', 'hbs');
+app.set('views', path.join( __dirname, './views'));
 app.engine('hbs', 
     engine({
     extname: '.hbs',

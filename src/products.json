@@ -20,6 +20,48 @@
       "price": "125",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Spiderman.JPG/1200px-Spiderman.JPG",
       "description": "Segunda película del arácnido"
+    },
+    {
+      "id": "f95fdbf6-23c1-49e6-8527-47b7ebcd3054",
+      "title": "Deadpol",
+      "price": "135",
+      "img": "lksjdkfjh",
+      "description": "inmortal"
+    },
+    {
+      "id": "e64a22b7-331a-4815-abe6-975a2f0c6111",
+      "title": "Deadpol2",
+      "price": "154",
+      "img": "u;jhkjhs",
+      "description": "inmortal2"
+    },
+    {
+      "id": "157893b3-a8df-4036-9040-b001f9aef6bf",
+      "title": "Deadpol23",
+      "price": "145",
+      "img": "df",
+      "description": "inmortal23"
+    },
+    {
+      "id": "e1e3ce8e-ca41-47f2-867b-ddfc48f49886",
+      "title": "Superman2",
+      "price": "156",
+      "img": "dlkdfld",
+      "description": "Hombre de hierro"
+    },
+    {
+      "id": "0a6fdf29-45fe-46c9-9b86-134be782eccb",
+      "title": "jacxinto",
+      "price": "156",
+      "img": "dfkjfdgkjh",
+      "description": "kj,hkj"
+    },
+    {
+      "id": "c2cd3175-e247-4069-9910-431d97c28e2f",
+      "title": "Hyundai",
+      "price": "156",
+      "img": "liksdi",
+      "description": "hola"
     }
   ]
 }

@@ -1,23 +1,31 @@
+'use strict'
+
+// Declaramos el dotenv para utilizar las variables de entorno
 require('dotenv').config();
-const app = require('./src/app');
-const { createConnection } = require('./src/database');
 const port = process.env.PORT || 8000;
-const http = require("http");
+const app = require('./src/app');
+const { getAll, createProduct } = require ('./src/controllers/task.controller')
+
+// Traemos la conexion a la db a traves de lowdb
+const { createConnection } = require('./src/database');
+createConnection(); 
+
+// Declaramos todo lo necesario para socket.io
+const http = require('http');
 const server = http.createServer(app);
 const { Server } = require('socket.io');
 const io = new Server(server);
 
-createConnection(); 
 
 // Funcion con comillas
 io.on("connection", (socket)=>{
     console.log('User Conected');
-    socket.on('dataClient', (data)=>{
-        msn.push(data);
-        io.sockets.emit('msjClient', msn)
+    socket.on('allProduct', ()=>{
+        io.sockets.emit('allProduct');
     });
-    socket.on('msjBack', (data)=>{
-        console.log(data)
+    socket.on('createProduct', (product)=>{
+        createProduct(product);
+        io.sockets.emit('allProduct');
     })
 })
 
